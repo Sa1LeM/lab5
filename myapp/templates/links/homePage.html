@@ -1,0 +1,23 @@
+{% load static %}
+
+<!DOCTYPE html> 
+<html lang="en">
+  <head> 
+    <link rel="stylesheet" type="text/css" href="{% static 'css/homepage.css' %}">
+</head>
+
+
+  <body>
+    <div class="page">
+        <h3>usernames of submitted users:</h3>
+        <ul>
+          {% for persons in people %}
+            <li>{{persons}}</li>
+          {% endfor %}
+        </ul>
+        <br>
+        <a href="{% url 'myapp:add' %}">Add a new Person</a>
+    </div>
+  </body>
+ <html>
+
